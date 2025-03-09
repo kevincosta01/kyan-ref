@@ -2,166 +2,134 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url('img/KYAN.jpeg');
-    background-size: 3500px;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
-    flex-flow: row wrap;
-    height: 100px;
-    background: transparent;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 80px;
+    padding: 0 5%;
     position: fixed;
     width: 100%;
+    background: rgba(0, 0, 0, 0.7);
     transition: background-color 0.3s;
     z-index: 1000;
 }
 
 .navbar:hover {
-    background-color: #444;
-}
-
-.logo {
-    flex: 10%;
-    margin-left: 10%;
-    text-align: left;
+    background-color: #222;
 }
 
 .logo h1 {
     font-family: 'Lobster', cursive;
+    font-size: 28px;
     color: white;
-    font-size: 34px;
 }
 
 .menu {
-    flex: 70%;
-    text-align: right;
-    padding: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .menu a {
     color: #f8f8f8;
     text-decoration: none;
-    font-size: 20px;
-    padding: 20px 16px;
+    font-size: 18px;
     transition: all 0.3s ease;
 }
 
 .menu a:hover {
-    color: white;
-    border-top: 4px solid #ffffff;
-    transform: scale(1.1);
+    color: #ffcc00;
 }
 
 #botao {
     background: #ffffff;
-    padding: 10px 25px;
-    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    color: #000;
     border-radius: 5px;
-    margin-right: 10%;
-    margin-left: 5%;
     transition: all 0.3s ease;
 }
 
 #botao:hover {
-    border: none;
     background: rgb(156, 230, 73);
     transform: scale(1.1);
 }
 
+/* Menu Responsivo */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Seção principal */
 section {
-    display: inline-block;
-    margin-top: 70px;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 5%;
     text-align: center;
-    opacity: 20;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
+    padding: 80px 5%;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-
-    }
-}
-
+/* Cards responsivos */
 .servicos {
-    display: inline-block;
-    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
-    display: inline-block;
-    width: 30%;
-    padding: 30px;
-    margin: 1%;
-    border: 1px solid #fcfcfc00;
-    border-radius: 70px;
-    cursor: pointer;
-    color: white;
+    flex: 1 1 300px;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 15px;
     background: #222;
-    box-shadow: 0 4px 8px black;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.2); /* Efeito de zoom */
+    transform: scale(1.05);
     background: aqua;
     color: black;
-    box-shadow: 0 8px 16px blueviolet;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
     padding: 40px;
 }
 
-.card-text {
-    display: block;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+    }
 
-.texto-oculto {
-    display: none;
-}
+    .menu a {
+        padding: 15px;
+        display: block;
+    }
 
-.card:hover .card-text {
-    display: none;
-}
-
-.card:hover .texto-oculto {
-    display: block;
-}
-
-footer {
-    margin-top: 400px;
-    height: 400px;
-    background-image: linear-gradient(180deg, #ffffff00, #11466900, rgba(255, 255, 255, 0));
-    text-align: center;
-    color: white;
-}
-
-.logo-rodape {
-    padding: 50px;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
+    .menu-icon {
+        display: block;
+    }
 }
