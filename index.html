@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajetória do Kyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Trajetória do Kyan</h1>
+        </div>
+        <div class="menu">
+            <a id="botao" href="https://open.spotify.com/intl-pt/artist/05qCf6M7E7AxizHVmrcPqh/discography/album">Álbuns</a>
+            <a id="botao" href="https://open.spotify.com/intl-pt/artist/05qCf6M7E7AxizHVmrcPqh/appears-on">Feats</a>
+            <a id="botao" href="https://www.instagram.com/ehxistudio/">EHXIS</a>
+            <a id="botao" href="https://open.spotify.com/intl-pt/artist/05qCf6M7E7AxizHVmrcPqh">Spotify</a>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Quem foi Renan MC? Como ele se tornou Kyan?</h2>
+        <div class="servicos">
+            <div class="card">
+                <img src="img/Kyan-Brinks.webp" style="width: 50%; height: auto;">
+                <div class="card-text">
+                    <h3>De Renan MC a Kyn</h3>
+                    <p>Renan Mesquita da Silva começou sua trajetória cantando na igreja e depois no funk. Aos 14 anos, decidiu explorar novos estilos até consolidar sua identidade no trap.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>O Primeiro Sucesso</h3>
+                    <p>Ao mudar para o trap, lançou "Mandrake", que rapidamente viralizou e marcou sua entrada definitiva na cena musical.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/mu540.jpg" style="width: 50%; height: auto;">
+                <div class="card-text">
+                    <h3>As músicas mais populares</h3>
+                    <p>Entre os maiores sucessos de Kyan estão "Mandona", "Brazil", "Mal Intencionada", "Baby Cê é Gata" e "Arrasta Pra China".</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>Feats de destaque</h3>
+                    <p>Algumas colaborações importantes incluem "The Box Medley 2", "Avisa Lá Pt 3" e "Cena de Crime".</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/ref e sua mae.jpeg" style="width: 30%; height: auto;">
+                <div class="card-text">
+                    <h3>Kyan e sua mãe</h3>
+                    <p>O artista frequentemente menciona sua mãe em suas músicas. "Nóis é Ruim e o Cabelo Ajuda" inclui a voz dela expressando orgulho pelo filho.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>"Mãe"</h3>
+                    <p>A faixa "Mãe" reflete sobre o luto e a relação com sua família, trazendo um dos momentos mais emocionantes de sua carreira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="music-player">
+        <h3>Escute Kyan</h3>
+        <audio id="audioPlayer" controls>
+            <source src="KYAN & MU540 - Fantastico Mundo da Oakley (Bonus Track).mp3" type="audio/mp3">
+        </audio>
+    </section>
+
+    <footer>
+        <div class="logo-rodape">
+            <h1>Agência EHXIS</h1>
+            <p>Todos os direitos reservados &copy; 2025</p>
+            <p><a href="https://www.instagram.com/kyanmaloka/" target="_blank">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.volume = 0.5;
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Space') {
+                    event.preventDefault();
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
